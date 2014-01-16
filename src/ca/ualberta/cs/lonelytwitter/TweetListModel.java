@@ -5,24 +5,24 @@ import java.util.ArrayList;
 
 public class TweetListModel
 {
-	private static ArrayList<LonelyTweetModel> tweetList;
+	private static ArrayList<AbstractLonelyTweetModel> tweetList;
 
 	public TweetListModel()
 	{
 
 		super();
-		tweetList = new ArrayList<LonelyTweetModel>();
+		tweetList = new ArrayList<AbstractLonelyTweetModel>();
 	}
 	
 	
-	public ArrayList<LonelyTweetModel> getTweetList()
+	public ArrayList<AbstractLonelyTweetModel> getTweetList()
 	{
 	
 		return tweetList;
 	}
 
 	
-	public void setTweetList(ArrayList<LonelyTweetModel> tweetList)
+	public void setTweetList(ArrayList<AbstractLonelyTweetModel> tweetList)
 	{
 	
 		this.tweetList = tweetList;
