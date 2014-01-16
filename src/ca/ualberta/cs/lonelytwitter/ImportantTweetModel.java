@@ -25,7 +25,11 @@ public class ImportantTweetModel extends LonelyTweetModel
 	
 	@Override
 	public Date getTimestamp(){
-		return null;
+		return super.timestamp;
+	}
+	
+	public boolean isImportant(){
+		return true;
 	}
 
 }
