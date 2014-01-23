@@ -16,7 +16,7 @@ public class TweetController implements TweetControllerInterface
 
 	public void addTweet(String text)
 	{
-		ArrayList<AbstractLonelyTweetModel> list = tweetListModel.getTweetList();
+		ArrayList<AbstractTweetModel> list = tweetListModel.getTweetList();
 		list.add(new NormalTweetModel(text));
 	}
 
