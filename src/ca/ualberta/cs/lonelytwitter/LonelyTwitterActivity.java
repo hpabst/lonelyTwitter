@@ -46,7 +46,7 @@ public class LonelyTwitterActivity extends Activity {
 			public void onClick(View v) {
 				setResult(RESULT_OK);
 				String text = bodyText.getText().toString();
-				saveInFile(text, new Date(System.currentTimeMillis()));
+				saveInFile(text, new Date(System.currentTimeMillis()));//Look at this for possible use in asn1.
 				//finish();
 				//tweets = loadFromFile();
 				tweets.add(text);
