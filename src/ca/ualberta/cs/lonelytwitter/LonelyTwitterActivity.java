@@ -9,6 +9,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Date;
 
+import com.google.gson.Gson;
+
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
@@ -25,6 +27,7 @@ public class LonelyTwitterActivity extends Activity {
 	private ListView oldTweetsList;
 	private ArrayAdapter<String> adapter;
 	private ArrayList<String> tweets;
+	private Gson gson;
 
 	
 	/** Called when the activity is first created. */
@@ -36,6 +39,7 @@ public class LonelyTwitterActivity extends Activity {
 		
 		//adapter = new ArrayAdapter<String>(this,
 				//R.layout.list_item, tweets);
+		gson = new Gson();
 
 		bodyText = (EditText) findViewById(R.id.body);//We're getting the actual object in our layout file so we can manipulate it.
 		Button saveButton = (Button) findViewById(R.id.save);
