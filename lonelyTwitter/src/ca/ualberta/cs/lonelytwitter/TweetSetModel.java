@@ -1,6 +1,7 @@
 package ca.ualberta.cs.lonelytwitter;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class TweetSetModel {
 	private int count = 0;
@@ -19,8 +20,9 @@ public class TweetSetModel {
 			throw new IllegalArgumentException();
 	}
 
-	public Object getTweets() {
+	public Object[] getTweets() {
 		// TODO Auto-generated method stub
+		//return  Arrays.copyOf(tweets.toArray(), tweets.toArray().length, LonelyTweetModel.class);
 		return tweets.toArray();
 	}
 	
