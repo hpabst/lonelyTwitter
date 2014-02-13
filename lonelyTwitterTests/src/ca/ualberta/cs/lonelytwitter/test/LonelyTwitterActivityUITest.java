@@ -1,13 +1,16 @@
 package ca.ualberta.cs.lonelytwitter.test;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Instrumentation;
+import android.content.Intent;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.ViewAsserts;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import ca.ualberta.cs.lonelytwitter.IntentReaderActivity;
 import ca.ualberta.cs.lonelytwitter.LonelyTwitterActivity;
 import ca.ualberta.cs.lonelytwitter.NormalTweetModel;
 
@@ -15,6 +18,7 @@ import ca.ualberta.cs.lonelytwitter.NormalTweetModel;
  * generate this class with new.. JUnit Test Case
  * set superclass to ActivityInstrumentationTestCase2
  */
+@SuppressLint("NewApi")
 public class LonelyTwitterActivityUITest extends
 		ActivityInstrumentationTestCase2<LonelyTwitterActivity> {
 
@@ -22,10 +26,12 @@ public class LonelyTwitterActivityUITest extends
 	Activity activity;
 	EditText textInput;
 	
+	@SuppressLint("NewApi")
 	public LonelyTwitterActivityUITest() {
 		super(LonelyTwitterActivity.class);
 	}
 
+	@SuppressLint("NewApi")
 	protected void setUp() throws Exception {
 		super.setUp();
 		instrumentation = getInstrumentation();
@@ -43,4 +49,6 @@ public class LonelyTwitterActivityUITest extends
 		textInput.setText(text);
 		((Button) activity.findViewById(ca.ualberta.cs.lonelytwitter.R.id.save)).performClick();
 	}
+	
+
 }
